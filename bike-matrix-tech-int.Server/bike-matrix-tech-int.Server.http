@@ -1,0 +1,35 @@
+@bike_matrix_tech_int.Server_HostAddress = http://localhost:5013
+
+### Get All Bikes
+GET {{host}}/api/bikes
+Accept: application/json
+
+### Get product by id
+GET {{host}}/api/bikes/1
+Accept: application/json
+
+### Create product
+POST {{host}}/api/bikes
+Content-Type: application/json
+
+{
+  "email": "test@example.com",
+  "brand": "Trek",
+  "model": "Road",
+  "year": 2024
+}
+
+### Update product
+PUT {{host}}/api/bikes/1
+Content-Type: application/json
+
+{
+  "id": 1
+  "email": "test@example.com",
+  "brand": "Giant",
+  "model": "Hybrid",
+  "year": 2023
+}
+
+### Delete product
+DELETE {{host}}/api/bikes/1
